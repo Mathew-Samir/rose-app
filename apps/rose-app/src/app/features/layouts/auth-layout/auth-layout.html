@@ -6,7 +6,11 @@
         <!-- Top Actions -->
         <div class="top-actions">
           <button class="theme-btn" (click)="darkService.toggle()">
-            <i class="pi pi-sun"></i>
+            @if (darkService.theme() === "dark") {
+              <i class="pi pi-moon"></i>
+            } @else {
+              <i class="pi pi-sun"></i>
+            }
           </button>
 
           <button class="lang-btn" (click)="translationService.toggleLanguage()">

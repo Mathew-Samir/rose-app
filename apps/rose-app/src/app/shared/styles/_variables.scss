@@ -1,12 +1,39 @@
 :root {
+  --font-family: "Inter", sans-serif;
+  --font-family-ar: "Zain", sans-serif;
+
   --white: #ffffff;
   --black: #000000;
+  --zinc-700: #3f3f46;
+  --maroon-700: #741c21;
+  --maroon-600: #a6252a;
+  --zinc-800: #27272a;
+  --zinc-600: #52525b;
+  --zinc-200: #e4e4e7;
+  --zinc-50: #fafafa;
+  --soft-pink-300: #ffa3b9;
 
-  // body bg color
   --body-color: var(--white);
+
+  //auth layout
+  --text-color-create-new: var(--maroon-700);
+  --lang-btn-color: var(--zinc-700);
+  --theme-btn-color: var(--maroon-600);
+  //login
+  --login-container-bg: var(--white);
+  --dont-have-an-account-color: var(--zinc-800);
+  --footer-divider-color: var(--zinc-200);
 }
 
 .dark-mode {
-  // body bg color
-  --body-color: var(--black);
+  --body-color: var(--zinc-800);
+
+  //auth layout
+  --text-color-create-new: var(--soft-pink-300);
+  --lang-btn-color: var(--zinc-50);
+  --theme-btn-color: var(--soft-pink-300);
+  //login
+  --login-container-bg: var(--zinc-800);
+  --dont-have-an-account-color: var(--zinc-50);
+  --footer-divider-color: var(--zinc-600);
 }

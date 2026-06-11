@@ -12,7 +12,7 @@
 
 /* Left Section */
 .left-side {
-  width: 49%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,9 +24,19 @@
   height: 600px;
 }
 
+.login-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+router-outlet {
+  display: none;
+}
+
 /* Right Section */
 .right-side {
-  width: 51%;
+  width: 50%;
   overflow: hidden;
 
   img {
@@ -39,22 +49,21 @@
 
 /* ==========================
    Top Actions
-========================== */
+========================= */
 
 .top-actions {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 12px;
-  margin-bottom: 1.5rem;
 }
 
 .theme-btn {
   width: 36px;
   height: 36px;
-  border-radius: 50%;
-  border: 1px solid #ead9b8;
-  background: #fff8e7;
+  // border-radius: 50%;
+  border: none;
+  background: none;
   cursor: pointer;
 
   display: flex;
@@ -64,7 +73,7 @@
   transition: all 0.3s ease;
 
   i {
-    color: #b62d2d;
+    color: var(--theme-btn-color);
     font-size: 16px;
   }
 
@@ -77,8 +86,10 @@
   border: none;
   background: transparent;
   cursor: pointer;
-  color: #444;
-  font-size: 14px;
+  color: var(--lang-btn-color);
+  font-size: 1rem;
+  line-height: 100%;
+  font-weight: 400;
 }
 /* ==========================
    Ornament
@@ -87,19 +98,23 @@
 .ornament {
   display: flex;
   justify-content: center;
-  margin-bottom: 1.5rem;
 
   img {
-    width: 260px;
+    width: 17.5rem;
     display: block;
+  }
+  :host-context(.dark-mode) & {
+    img {
+      filter: brightness(0) saturate(100%) invert(76%) sepia(15%) saturate(1200%) hue-rotate(298deg)
+        brightness(103%) contrast(101%);
+    }
   }
 }
 
 .reverse {
-  margin-top: 1.5rem;
-
   img {
     transform: rotate(180deg);
+    gap: 1rem !important;
   }
 }
 

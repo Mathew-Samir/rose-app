@@ -1,6 +1,14 @@
 {
   "TOGGLE_LANG": "العربية",
   "AUTH": {
-    "LOGIN": "login"
+    "LOGIN": "login",
+    "FORGOT_PASSWORD": "Forgot your password?",
+    "DONT_HAVE_AN_ACCOUNT": "Don’t have an account yet?",
+    "CREATE_ONE_NOW": "Create one now!",
+    "FORMS": {
+      "EMAIL": "Email",
+      "PASSWORD": "Password",
+      "REMEMBER_ME": "Remember me"
+    }
   }
 }
