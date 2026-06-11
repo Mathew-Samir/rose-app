@@ -1,0 +1,36 @@
+<div class="auth-layout">
+  <!-- Left Side -->
+  <div class="left-side">
+    <div class="placeholder-card">
+      <div class="login-container">
+        <!-- Top Actions -->
+        <div class="top-actions">
+          <button class="theme-btn" (click)="darkService.toggle()">
+            <i class="pi pi-sun"></i>
+          </button>
+
+          <button class="lang-btn" (click)="translationService.toggleLanguage()">
+            {{ "TOGGLE_LANG" | translate }}
+          </button>
+        </div>
+
+        <!-- Top Ornament -->
+        <div class="ornament">
+          <img src="/images/separator-1 1.svg" alt="ornament" />
+        </div>
+
+        <router-outlet />
+
+        <!-- Bottom Ornament -->
+        <div class="ornament reverse">
+          <img src="/images/separator-1 1.svg" alt="ornament" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Side -->
+  <div class="right-side">
+    <img src="/images/Cover.svg" alt="Gift Background" />
+  </div>
+</div>
