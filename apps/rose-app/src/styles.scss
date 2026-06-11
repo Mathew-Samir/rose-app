@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./app/shared/styles/variables" as var;
+@use "./app/shared/styles/utilities" as util;
+@use "./app/shared/styles/functions" as func;
+
+@import "primeicons/primeicons.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
