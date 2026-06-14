@@ -1,13 +1,11 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NxWelcome } from './nx-welcome';
+import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { RouterOutlet } from "@angular/router";
 
 @Component({
-  imports: [NxWelcome, RouterModule],
-  selector: 'app-root',
-  templateUrl: './app.html',
-  styleUrl: './app.scss',
+  imports: [RouterOutlet],
+  selector: "app-root",
+  templateUrl: "./app.html",
+  styleUrl: "./app.scss",
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class App {
-  protected title = 'rose-app';
-}
+export class App {}

@@ -1,0 +1,56 @@
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  margin: auto;
+  padding: 0rem;
+  background: var(--login-container-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ==========================
+   Title
+========================== */
+.title {
+  display: flex;
+  justify-content: center;
+  img {
+    width: 205px;
+    display: block;
+  }
+
+  :host-context(.dark-mode) & {
+    img {
+      filter: brightness(0) saturate(100%) invert(76%) sepia(15%) saturate(1200%) hue-rotate(298deg)
+        brightness(103%) contrast(101%);
+    }
+  }
+}
+
+/* ==========================
+   Divider
+========================== */
+
+.footer-divider {
+  height: 1px;
+  background: var(--footer-divider-color);
+}
+
+/* ==========================
+   Register
+========================== */
+
+.register-text {
+  text-align: center;
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 700;
+  color: var(--dont-have-an-account-color);
+
+  a {
+    color: var(--text-color-create-new);
+    text-decoration: none;
+    margin-left: 4px;
+  }
+}
