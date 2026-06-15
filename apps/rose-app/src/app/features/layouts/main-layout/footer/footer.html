@@ -1,0 +1,63 @@
+<footer 
+  [dir]="isRtl ? 'rtl' : 'ltr'" style="padding: 3%;"
+  class="bg-[#27272A] text-[#e5e7eb] py-16 px-6 md:px-16 lg:px-24 font-sans border-t border-gray-800 text-base"
+>
+  <div class="max-w-full mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-start w-full">
+    
+    <div class="md:col-span-2 flex flex-col items-center md:items-start space-y-4">
+      <div class="w-40 h-40 flex items-center justify-center">
+        <img src="/images/rose.png" alt="Rose Logo" class="object-contain max-h-full">
+      </div>
+      <div class="text-center" [ngClass]="isRtl ? 'md:text-right' : 'md:text-left'">
+        <h3 class="text-[#f48fb1] font-semibold text-lg">{{ 'FOOTER.APP_NAME' | translate }}</h3>
+        <p class="text-gray-400 text-sm mt-1 dir-ltr">{{ 'FOOTER.RIGHTS' | translate }}</p>
+      </div>
+    </div>
+
+    <div class="md:col-span-3 flex flex-col items-center">
+      <h4 class="text-[#f48fb1] text-lg font-semibold mb-4">{{ 'FOOTER.DISCOVER_TITLE' | translate }}</h4>
+      <ul class="space-y-2 text-center text-gray-300" [ngClass]="isRtl ? 'md:text-right' : 'md:text-left'">
+        <li><a href="#" class="hover:text-[#f48fb1] transition-colors">{{ 'FOOTER.LINKS.HOME' | translate }}</a></li>
+        <li><a href="#" class="hover:text-[#f48fb1] transition-colors">{{ 'FOOTER.LINKS.PRODUCTS' | translate }}</a></li>
+        <li><a href="#" class="hover:text-[#f48fb1] transition-colors">{{ 'FOOTER.LINKS.CATEGORIES' | translate }}</a></li>
+        <li><a href="#" class="hover:text-[#f48fb1] transition-colors">{{ 'FOOTER.LINKS.OCCASIONS' | translate }}</a></li>
+        <li><a href="#" class="hover:text-[#f48fb1] transition-colors">{{ 'FOOTER.LINKS.CONTACT' | translate }}</a></li>
+        <li><a href="#" class="hover:text-[#f48fb1] transition-colors">{{ 'FOOTER.LINKS.ABOUT' | translate }}</a></li>
+        <li><a href="#" class="hover:text-[#f48fb1] transition-colors">{{ 'FOOTER.LINKS.TERMS' | translate }}</a></li>
+        <li><a href="#" class="hover:text-[#f48fb1] transition-colors">{{ 'FOOTER.LINKS.PRIVACY' | translate }}</a></li>
+        <li><a href="#" class="hover:text-[#f48fb1] transition-colors">{{ 'FOOTER.LINKS.FAQS' | translate }}</a></li>
+      </ul>
+    </div>
+
+    <div class="hidden md:block md:col-span-4"></div>
+
+    <div class="md:col-span-3 flex flex-col items-stretch w-full"
+    
+    >
+      <div class="w-full text-center" [ngClass]="isRtl ? 'md:text-right' : 'md:text-left'" style="margin-bottom: 4%;">
+        <h4 class="text-white text-lg font-semibold leading-snug">
+          {{ 'FOOTER.COUPON_TITLE' | translate }}
+        </h4>
+        <p class="text-gray-400 text-xs mt-1">{{ 'FOOTER.COUPON_SUBTITLE' | translate }}</p>
+      </div>
+
+      <div class="relative w-full flex items-center bg-[#4d4c54] rounded-full p-1 border border-transparent focus-within:border-[#f48fb1] transition-all">
+        <input 
+          pInputText 
+          type="email" 
+          [placeholder]="'FOOTER.EMAIL_PLACEHOLDER' | translate" 
+          class="w-full bg-transparent text-white py-2 border-none outline-none focus:ring-0 placeholder-gray-400 text-sm"
+          [ngClass]="isRtl ? 'pr-4 pl-32' : 'pl-4 pr-32'"
+        />
+        <button 
+          class="absolute bg-[#fce4ec] text-[#880e4f] px-5 rounded-full font-medium text-sm flex items-center gap-2 hover:bg-[#f8bbd0] transition-colors duration-200 h-[calc(100%-8px)] my-auto"
+          [ngClass]="isRtl ? 'left-1' : 'right-1'"
+        >
+          {{ 'FOOTER.SUBSCRIBE_BTN' | translate }}
+          <i class="pi text-xs" [ngClass]="isRtl ? 'pi-arrow-left' : 'pi-arrow-right'"></i>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</footer>
