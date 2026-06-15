@@ -10,5 +10,14 @@
       "PASSWORD": "كلمة المرور",
       "REMEMBER_ME": "تذكرني"
     }
+  },
+  "NAVBAR": {
+    "SEARCH_NAVBAR": "ما هي الهدية الرائعة التي تبحث عنها؟",
+    "HOME": "الرئيسية",
+    "PRODUCTS": "المنتجات",
+    "CATEGORIES": "الأقسام",
+    "OCCASIONS": "المناسبات",
+    "CONTACT": "تواصل معنا",
+    "ABOUT": "من نحن"
   }
 }

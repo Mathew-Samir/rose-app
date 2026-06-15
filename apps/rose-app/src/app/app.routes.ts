@@ -37,6 +37,11 @@ export const appRoutes: Route[] = [
     ],
   },
   {
+    path: "home",
+    loadComponent: () => import("./features/layouts/main-layout/main-layout").then((m) => m.MainLayout),
+    title: "Login",
+  },
+  {
     path: "**",
     loadComponent: () => import("./features/pages/not-found/not-found").then((m) => m.NotFound),
     title: "Not Found",

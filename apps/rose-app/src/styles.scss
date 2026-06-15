@@ -1,6 +1,7 @@
 @use "./app/shared/styles/variables" as var;
 @use "./app/shared/styles/utilities" as util;
 @use "./app/shared/styles/functions" as func;
+@use 'tailwindcss';
 
 @import "primeicons/primeicons.css";
 
