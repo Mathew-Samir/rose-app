@@ -5,16 +5,25 @@ import { provideClientHydration, withEventReplay } from "@angular/platform-brows
 import { providePrimeNG } from "primeng/config";
 import { ApplicationConfig } from "@angular/core";
 import Aura from "@primeuix/themes/aura";
-import { provideHttpClient } from "@angular/common/http";
+import { provideHttpClient, withInterceptors } from "@angular/common/http";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader, provideTranslateHttpLoader } from "@ngx-translate/http-loader";
+import { provideMsrAuth } from "msr-auth";
+import { environment } from "../../../environment/baseurl.dev";
+import { headerInterceptor } from "./core/interceptors/header/header-interceptor";
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideClientHydration(withEventReplay()),
     provideBrowserGlobalErrorListeners(),
-    provideHttpClient(),
+    provideHttpClient(withInterceptors([headerInterceptor])),
     provideRouter(appRoutes),
+    provideMsrAuth({
+      baseUrl: environment.baseApiUrl,
+      endpoints: {
+        login: "auth/login",
+      },
+    }),
     providePrimeNG({
       theme: {
         preset: Aura,
