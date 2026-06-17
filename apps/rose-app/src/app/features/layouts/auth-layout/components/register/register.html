@@ -1,9 +1,14 @@
-<lib-button
-[label]="'Register'"
-></lib-button>
+<form [formGroup]="form">
 
-<lib-input
-[label]="'Email'"
-[type]="'email'"
-[placeholder]="'user@example.com'"
-></lib-input>
+  <lib-input
+    formControlName="email"
+    [label]="'Email'"
+    [type]="'email'"
+    [placeholder]="'user@example.com'"
+  ></lib-input>
+
+  <lib-error-message [control]="form.controls.email"></lib-error-message>
+
+  <lib-button [label]="'Register'"></lib-button>
+
+</form>

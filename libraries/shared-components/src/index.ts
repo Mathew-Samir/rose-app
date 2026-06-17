@@ -1,5 +1,3 @@
-export * from "./lib/shared-components/shared-components";
-
 export * from "./lib/button/button";
 
 export * from "./lib/error-message/error-message";

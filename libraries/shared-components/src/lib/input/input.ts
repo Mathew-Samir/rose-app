@@ -1,11 +1,11 @@
 import { Component, Input, forwardRef } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR, FormsModule } from '@angular/forms';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+
 @Component({
   selector: "lib-input",
-  imports: [FormsModule],
-  standalone: true,
+  imports: [],
   templateUrl: "./input.html",
-  styleUrl: "./input.css",
+  styleUrl: "./input.scss",
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
@@ -16,24 +16,24 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR, FormsModule } from '@angular/f
 })
 export class InputComponent implements ControlValueAccessor {
   @Input() label = '';
-  @Input() type: string = 'text';
   @Input() placeholder = '';
-  @Input() disabled = false;
+  @Input() type = 'text';
 
-  value: any = '';
+  value = '';
+  disabled = false;
 
-  onChange = (value: any) => {};
+  onChange = (_value: string) => {};
   onTouched = () => {};
 
-  writeValue(value: any): void {
-    this.value = value;
+  writeValue(value: string): void {
+    this.value = value ?? '';
   }
 
-  registerOnChange(fn: any): void {
+  registerOnChange(fn: (value: string) => void): void {
     this.onChange = fn;
   }
 
-  registerOnTouched(fn: any): void {
+  registerOnTouched(fn: () => void): void {
     this.onTouched = fn;
   }
 
@@ -41,9 +41,10 @@ export class InputComponent implements ControlValueAccessor {
     this.disabled = isDisabled;
   }
 
-  updateValue(event: any) {
-    this.value = event.target.value;
-    this.onChange(this.value);
-    this.onTouched();
+  handleInput(event: Event): void {
+    const value = (event.target as HTMLInputElement).value;
+
+    this.value = value;
+    this.onChange(value);
   }
 }

@@ -2,10 +2,9 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
   selector: "lib-button",
-  standalone: true,
   imports: [],
   templateUrl: "./button.html",
-  styleUrl: "./button.css",
+  styleUrl: "./button.scss",
 })
 export class ButtonComponent {
   @Input({ required: true }) label!: string;

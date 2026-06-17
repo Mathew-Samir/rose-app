@@ -1,71 +1,24 @@
 # Shared Components Library
 
-This library provides reusable UI components used across the application to ensure consistency, scalability, and maintainability.
+A centralized library containing reusable UI components used across the application.
 
----
+# Installation
 
-# 📦 Components
+Import components directly from the shared library:
 
-## 1. Input Component
-
-### Selector
-
-```html
-<lib-input></lib-input>
+```ts
+import {
+  ButtonComponent,
+  InputComponent,
+  ErrorMessageComponent
+} from '@rose/shared-components';
 ```
 
 ---
 
-### Description
+# Components
 
-A reusable form input component that supports Angular forms (Template-driven & Reactive) using ControlValueAccessor.
-
----
-
-### Inputs
-
-| Input       | Type    | Default | Description                              |
-| ----------- | ------- | ------- | ---------------------------------------- |
-| label       | string  | ''      | Input label text                         |
-| type        | string  | 'text'  | Input type (text, email, password, etc.) |
-| placeholder | string  | ''      | Placeholder text                         |
-| disabled    | boolean | false   | Disable input                            |
-
----
-
-### Usage (Template-driven)
-
-```html
-<lib-input
-  label="Email"
-  type="email"
-  placeholder="Enter email"
-  [(ngModel)]="email">
-</lib-input>
-```
-
----
-
-### Usage (Reactive Forms)
-
-```html
-<lib-input formControlName="email"></lib-input>
-```
-
----
-
-### Features
-
-* ControlValueAccessor support
-* Works with Angular Forms
-* Fully reusable
-* Lightweight and accessible
-
----
-
----
-
-## 2. Button Component
+## Button Component
 
 ### Selector
 
@@ -73,67 +26,153 @@ A reusable form input component that supports Angular forms (Template-driven & R
 <lib-button></lib-button>
 ```
 
----
-
 ### Description
 
-A reusable button component with support for different styles and states.
-
----
+Reusable button component supporting different variants and states.
 
 ### Inputs
 
-| Input    | Type    | Default   | Description                               |
-| -------- | ------- | --------- | ----------------------------------------- |
-| label    | string  | ''        | Button text                               |
-| type     | string  | 'button'  | HTML button type                          |
-| variant  | string  | 'primary' | Button style (primary, secondary, danger) |
-| disabled | boolean | false     | Disable button                            |
-| loading  | boolean | false     | Show loading state                        |
+| Input    | Type                    | Default | Description        |
+| -------- | ----------------------- | ------- | ------------------ |
+| label    | string                  | ''      | Button text        |
+| type     | button | submit | reset | button  | HTML button type   |
+| disabled | boolean                 | false   | Disable button     |
+| loading  | boolean                 | false   | Show loading state |
 
----
-
-### Usage
+### Example
 
 ```html
 <lib-button
-  label="Submit"
-  variant="primary">
+  label="Save">
 </lib-button>
 ```
-
----
-
-### With Loading State
-
-```html
-<lib-button
-  label="Saving..."
-  [loading]="true">
-</lib-button>
-```
-
----
 
 ### Features
 
-* Multiple variants support
-* Loading state
-* Disabled state
-* Fully reusable across app
+* Reusable
+* Accessible
+* Supports disabled state
+* Supports loading state
 
 ---
 
-# 📌 Notes
+## Input Component
 
-* All components are standalone
-* Import directly from shared library
-* Designed for scalability and consistency
+### Selector
 
----
+```html
+<lib-input></lib-input>
+```
 
-# 🚀 Import Example
+### Description
+
+Reusable form input built using Angular ControlValueAccessor (CVA).
+
+Compatible with:
+
+* Reactive Forms
+* Template Driven Forms
+
+### Inputs
+
+| Input       | Type   | Default | Description      |
+| ----------- | ------ | ------- | ---------------- |
+| label       | string | ''      | Input label      |
+| placeholder | string | ''      | Placeholder text |
+| type        | string | text    | Input type       |
+
+### Reactive Forms Example
+
+Component:
 
 ```ts
-import { InputComponent, ButtonComponent } from '@rose/shared-components';
+form = new FormGroup({
+  email: new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]),
+});
 ```
+
+Template:
+
+```html
+<form [formGroup]="form">
+
+  <lib-input
+    formControlName="email"
+    label="Email"
+    placeholder="user@example.com">
+  </lib-input>
+
+</form>
+```
+
+### Template Driven Example
+
+```html
+<lib-input
+  [(ngModel)]="email"
+  name="email">
+</lib-input>
+```
+
+### Features
+
+* ControlValueAccessor implementation
+* Reactive Forms support
+* Template Driven Forms support
+* Reusable and configurable
+
+---
+
+## Error Message Component
+
+### Selector
+
+```html
+<lib-error-message></lib-error-message>
+```
+
+### Description
+
+Displays validation messages for Angular form controls.
+
+### Inputs
+
+| Input   | Type            | Description          |
+| ------- | --------------- | -------------------- |
+| control | AbstractControl | Angular form control |
+
+### Supported Validations
+
+* required
+* email
+* minlength
+* maxlength
+* pattern
+
+### Example
+
+```html
+<lib-error-message
+  [control]="form.controls.email">
+</lib-error-message>
+```
+
+### Display Logic
+
+Error message is displayed when:
+
+```ts
+control.invalid &&
+(control.touched || control.dirty)
+```
+
+### Features
+
+* Automatic validation messages
+* Reactive Forms integration
+* Accessible error state
+
+---
