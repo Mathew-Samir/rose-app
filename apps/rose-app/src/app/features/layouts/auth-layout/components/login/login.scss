@@ -54,3 +54,58 @@
     margin-left: 4px;
   }
 }
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-color, #333);
+    }
+
+    input {
+      padding: 0.75rem;
+      border: 1px solid var(--input-border-color, #ccc);
+      border-radius: 4px;
+      font-size: 16px;
+      background: var(--input-bg, #fff);
+      color: var(--input-text-color, #000);
+
+      &.invalid {
+        border-color: red;
+      }
+    }
+  }
+
+  .submit-btn {
+    padding: 0.75rem;
+    background: var(--primary-color, #007bff);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0.5rem;
+
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+  }
+
+  .error-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+  }
+}

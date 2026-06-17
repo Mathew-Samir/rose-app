@@ -6,6 +6,7 @@
     "DONT_HAVE_AN_ACCOUNT": "ليس لديك حساب؟",
     "CREATE_ONE_NOW": "إنشاء حساب جديد",
     "FORMS": {
+      "USERNAME": "اسم المستخدم",
       "EMAIL": "البريد الإلكتروني",
       "PASSWORD": "كلمة المرور",
       "REMEMBER_ME": "تذكرني"
