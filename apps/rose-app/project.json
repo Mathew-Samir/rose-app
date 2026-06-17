@@ -29,6 +29,12 @@
       },
       "configurations": {
         "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/environment/baseurl.dev.ts",
+              "with": "apps/environment/baseurl.prod.ts"
+            }
+          ],
           "budgets": [
             {
               "type": "initial",
