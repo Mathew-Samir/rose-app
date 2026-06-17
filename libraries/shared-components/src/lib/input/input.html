@@ -1,0 +1,13 @@
+<div class="input-wrapper">
+    @if(label) {
+        <label>{{ label }}</label>
+    }
+  
+    <input
+      [type]="type"
+      [placeholder]="placeholder"
+      [disabled]="disabled"
+      (input)="updateValue($event)"
+      (blur)="onTouched()"
+    />
+  </div>
