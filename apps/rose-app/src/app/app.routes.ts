@@ -34,6 +34,14 @@ export const appRoutes: Route[] = [
           ),
         title: "Reset Password",
       },
+      {
+        path: "reset-password/new-password",
+        loadComponent: () =>
+          import(
+            "./features/layouts/auth-layout/components/reset-password/components/new-password/new-password"
+          ).then((m) => m.NewPassword),
+        title: "New Password",
+      },
     ],
   },
   {

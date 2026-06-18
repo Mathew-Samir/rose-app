@@ -1,0 +1,85 @@
+::ng-deep {
+  p-password,
+  .p-password {
+    display: inline-flex;
+    position: relative;
+    width: 100%;
+
+    .p-password-input {
+      width: 100% !important;
+      padding: 0.75rem 2.5rem 0.75rem 1rem !important;
+      border: 1px solid var(--input-border-color) !important;
+      border-radius: var(--input-border-radius, 12px) !important;
+      font-size: 16px;
+      background: var(--input-bg) !important;
+      color: var(--input-text-color) !important;
+      font-family: inherit;
+      transition:
+        border-color 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out !important;
+
+      &::placeholder {
+        color: var(--input-placeholder-color);
+      }
+
+      &:focus,
+      &.p-focus {
+        outline: none !important;
+        border-color: var(--input-focus-border-color, var(--maroon-600)) !important;
+        box-shadow: 0 0 0 1px var(--input-focus-border-color, var(--maroon-600)) !important;
+      }
+
+      &.invalid,
+      &.ng-invalid.ng-touched {
+        border-color: var(--red-600) !important;
+        box-shadow: 0 0 0 1px var(--red-600) !important;
+      }
+    }
+
+    // Eye toggle icon styling
+    .p-password-toggle-icon,
+    .p-password-icon,
+    i.pi {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: var(--zinc-400) !important;
+      z-index: 2;
+      transition: color 0.2s ease-in-out;
+      font-size: 1.15rem;
+
+      &:hover {
+        color: var(--zinc-600) !important;
+      }
+    }
+
+    // Dark mode specific hover for toggle icon
+    :host-context(.dark-mode) & {
+      .p-password-toggle-icon,
+      .p-password-icon,
+      i.pi {
+        color: var(--zinc-500) !important;
+
+        &:hover {
+          color: var(--zinc-300) !important;
+        }
+      }
+    }
+
+    // RTL alignment adjustments
+    :host-context([dir="rtl"]) & {
+      .p-password-input {
+        padding: 0.75rem 1rem 0.75rem 2.5rem !important;
+      }
+
+      .p-password-toggle-icon,
+      .p-password-icon,
+      i.pi {
+        right: auto;
+        left: 1rem;
+      }
+    }
+  }
+}

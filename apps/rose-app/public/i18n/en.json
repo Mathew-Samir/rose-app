@@ -10,6 +10,39 @@
       "EMAIL": "Email",
       "PASSWORD": "Password",
       "REMEMBER_ME": "Remember me"
+    },
+    "RESET_PASSWORD": {
+      "PASSWORD_RESET_SENT": "Password Reset Sent",
+      "WE_HAVE_SENT_LINK": "We have sent a password reset link to:",
+      "PLEASE_CHECK_INBOX": "Please check your inbox and follow the instructions to reset your password.",
+      "CHECK_SPAM_FOLDER": "If you don't see the email within a few minutes, check your spam or junk folder.",
+      "FORGOT_PASSWORD_TITLE": "Forgot Password?",
+      "FORGOT_PASSWORD_SUBTITLE": "Worry not, we’ll send you instructions to help you reset it.",
+      "SEND_RESET_LINK": "Send Reset Link",
+      "BACK_TO_LOGIN": "Back to login",
+      "NEW_PASSWORD_TITLE": "Create a new password",
+      "NEW_PASSWORD_SUBTITLE": "Set a strong password to secure your account.",
+      "RESET_PASSWORD_BTN": "Reset Password",
+      "FORMS": {
+        "NEW_PASSWORD": "New Password",
+        "CONFIRM_PASSWORD": "Confirm Password"
+      }
     }
+  },
+  "messagesToast": {
+    "loginFailed": "Login failed. Please check your credentials.",
+    "loginSuccess": "Login successful. Welcome back!"
+  },
+  "AUTH_PASSWORD_RULES": {
+    "TITLE": "Password must contain:",
+    "MIN_LENGTH": "At least 8 characters",
+    "LOWERCASE": "At least one lowercase letter (a-z)",
+    "UPPERCASE": "At least one uppercase letter (A-Z)",
+    "NUMBER": "At least one number (0-9)",
+    "SPECIAL": "At least one special character",
+    "PASSWORD_STRENGTH": "Password Strength",
+    "STRENGTH_WEAK": "Weak",
+    "STRENGTH_MEDIUM": "Medium",
+    "STRENGTH_STRONG": "Strong"
   }
 }
