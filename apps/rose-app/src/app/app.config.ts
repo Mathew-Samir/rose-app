@@ -2,21 +2,31 @@ import { importProvidersFrom, provideBrowserGlobalErrorListeners } from "@angula
 import { provideRouter } from "@angular/router";
 import { appRoutes } from "./app.routes";
 import { provideClientHydration, withEventReplay } from "@angular/platform-browser";
+import { provideAnimationsAsync } from "@angular/platform-browser/animations/async";
 import { providePrimeNG } from "primeng/config";
 import { ApplicationConfig } from "@angular/core";
 import Aura from "@primeuix/themes/aura";
-import { provideHttpClient, withInterceptors } from "@angular/common/http";
+import { provideHttpClient, withFetch, withInterceptors } from "@angular/common/http";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader, provideTranslateHttpLoader } from "@ngx-translate/http-loader";
 import { provideMsrAuth } from "msr-auth";
 import { environment } from "../../../environment/baseurl.dev";
 import { headerInterceptor } from "./core/interceptors/header/header-interceptor";
+import { apiResponseInterceptor } from "./core/interceptors/api-response/api-response-interceptor";
+import { MessageService } from "primeng/api";
+import { ToastModule } from "primeng/toast";
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideClientHydration(withEventReplay()),
     provideBrowserGlobalErrorListeners(),
-    provideHttpClient(withInterceptors([headerInterceptor])),
+    provideHttpClient(
+      withFetch(),
+      withInterceptors([headerInterceptor, apiResponseInterceptor])
+    ),
+    MessageService,
+    importProvidersFrom(ToastModule),
+    provideAnimationsAsync(),
     provideRouter(appRoutes),
     provideMsrAuth({
       baseUrl: environment.baseApiUrl,
