@@ -2,32 +2,43 @@
   display: block;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 
 .auth-layout {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
 }
 
-/* Left Section */
 .left-side {
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  overflow-y: auto;
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .placeholder-card {
   width: 420px;
-  height: 600px;
+  max-height: 100%;
 }
 
 .login-container {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  justify-content: center;
 }
 
 router-outlet {
