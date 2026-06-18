@@ -26,12 +26,13 @@
 
     <div class="form-group">
       <label for="password">{{ "AUTH.FORMS.PASSWORD" | translate }}</label>
-      <input 
+      <p-password 
         id="password" 
-        type="password" 
         formControlName="password" 
+        [toggleMask]="true"
+        [feedback]="false"
         [class.invalid]="loginForm.controls.password.touched && loginForm.controls.password.invalid"
-      />
+      ></p-password>
     </div>
 
     <button type="submit" [disabled]="isLoading()" class="submit-btn">
