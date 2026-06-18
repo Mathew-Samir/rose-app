@@ -10,5 +10,34 @@
       "PASSWORD": "Password",
       "REMEMBER_ME": "Remember me"
     }
+  },
+  "NAVBAR": {
+    "SEARCH_NAVBAR": "What awesome gift are you looking for?",
+    "HOME": "Home",
+    "PRODUCTS": "Products",
+    "CATEGORIES": "Categories",
+    "OCCASIONS": "Occasions",
+    "CONTACT": "Contact",
+    "ABOUT": "About"
+  },  
+  "FOOTER": {
+    "APP_NAME": "Rose E-Commerce App",
+    "RIGHTS": "All rights reserved | 2025",
+    "DISCOVER_TITLE": "Discover our website",
+    "LINKS": {
+      "HOME": "Home",
+      "PRODUCTS": "Products",
+      "CATEGORIES": "Categories",
+      "OCCASIONS": "Occasions",
+      "CONTACT": "Contact",
+      "ABOUT": "About",
+      "TERMS": "Terms & Conditions",
+      "PRIVACY": "Privacy Policy",
+      "FAQS": "FAQs"
+    },
+    "COUPON_TITLE": "Get 20% Off Discount Coupon",
+    "COUPON_SUBTITLE": "By subscribing to our newsletter",
+    "EMAIL_PLACEHOLDER": "Enter Your Email",
+    "SUBSCRIBE_BTN": "Subscribe"
   }
 }
