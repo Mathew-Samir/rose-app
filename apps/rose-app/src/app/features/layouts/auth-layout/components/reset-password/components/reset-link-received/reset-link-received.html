@@ -1,0 +1,24 @@
+<div class="reset-link-container">
+  <div class="title-container">
+    <h2>{{ "AUTH.RESET_PASSWORD.PASSWORD_RESET_SENT" | translate }}</h2>
+  </div>
+
+  <div class="content">
+    <p>
+      {{ "AUTH.RESET_PASSWORD.WE_HAVE_SENT_LINK" | translate }}
+      <br />
+      <span class="email-highlight">{{ email() }}</span>
+    </p>
+
+    <p>{{ "AUTH.RESET_PASSWORD.PLEASE_CHECK_INBOX" | translate }}</p>
+
+    <p class="text-gray">{{ "AUTH.RESET_PASSWORD.CHECK_SPAM_FOLDER" | translate }}</p>
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <p class="register-text">
+    {{ "AUTH.DONT_HAVE_AN_ACCOUNT" | translate }}
+    <a routerLink="/auth-layout/register"> {{ "AUTH.CREATE_ONE_NOW" | translate }} </a>
+  </p>
+</div>

@@ -1,0 +1,60 @@
+.reset-link-container {
+  width: 100%;
+  max-width: 450px;
+  margin: auto;
+  padding: 0rem;
+  background: var(--login-container-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title-container h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-color, #333);
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-color, #333);
+  margin: 0;
+}
+
+.email-highlight {
+  color: var(--primary-color, #007bff);
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.text-gray {
+  color: var(--text-gray, #888);
+  font-size: 14px;
+}
+
+.footer-divider {
+  height: 1px;
+  background: var(--footer-divider-color, #eaeaea);
+  margin: 1rem 0;
+}
+
+.register-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dont-have-an-account-color, #555);
+
+  a {
+    color: var(--text-color-create-new, #007bff);
+    text-decoration: none;
+    margin-left: 4px;
+  }
+}
