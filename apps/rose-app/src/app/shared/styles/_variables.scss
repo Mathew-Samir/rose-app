@@ -4,11 +4,13 @@
 
   --white: #ffffff;
   --black: #000000;
-  --zinc-700: #3f3f46;
   --maroon-700: #741c21;
   --maroon-600: #a6252a;
   --zinc-800: #27272a;
+  --zinc-700: #3f3f46;
   --zinc-600: #52525b;
+  --zinc-400:#A1A1AA;
+  --zinc-300:#D4D4D8;
   --zinc-200: #e4e4e7;
   --zinc-50: #fafafa;
   --soft-pink-300: #ffa3b9;
@@ -23,6 +25,14 @@
   --login-container-bg: var(--white);
   --dont-have-an-account-color: var(--zinc-800);
   --footer-divider-color: var(--zinc-200);
+  //reusable components
+  --reusbale-button-bg: var(--maroon-600);
+  --reusbale-button-color: var(--white);
+  --reusbale-input-bg: var(--white);
+  --reusbale-input-label: var(--black);
+  --reusbale-input-border: var(--zinc-300);
+  --reusbale-input-color: var(--zinc-400);
+
 }
 
 .dark-mode {
@@ -36,4 +46,11 @@
   --login-container-bg: var(--zinc-800);
   --dont-have-an-account-color: var(--zinc-50);
   --footer-divider-color: var(--zinc-600);
+  //reusable components
+  --reusbale-button-bg: var(--soft-pink-300);
+  --reusbale-button-color: var(--zinc-800);
+  --reusbale-input-bg: var(--zinc-700);
+  --reusbale-input-label: var(--zinc-50);
+  --reusbale-input-border: var(--zinc-600);
+  --reusbale-input-color: var(--zinc-400);
 }

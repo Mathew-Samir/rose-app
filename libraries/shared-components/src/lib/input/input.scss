@@ -1,0 +1,26 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    color: var(--reusbale-input-label);
+  }
+}
+
+input {
+  padding: 1rem;
+  background-color: var(--reusbale-input-bg);
+  color: var(--reusbale-input-color);
+  border: 1px solid var(--reusbale-input-border);
+  border-radius: 6px;
+  outline: none;
+
+  &::placeholder {
+    color: var(--reusbale-input-color);
+  }
+}
+
+input:focus {
+  border-color: var(--reusbale-button-bg);
+}

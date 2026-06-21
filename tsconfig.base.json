@@ -19,6 +19,9 @@
     "paths": {
       "@rose/shared-services": [
         "./libraries/shared-services/src/index.ts"
+      ],
+      "@rose/shared-components": [
+        "./libraries/shared-components/src/index.ts"
       ]
     }
   },
